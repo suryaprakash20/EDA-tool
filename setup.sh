@@ -1,7 +1,14 @@
 mkdir -p ~/.streamlit/
 
-echo "[server]
-headless = true
-port = run(host='0.0.0.0', port=os.environ.get('PORT', '5000'))
-enableCORS = false
+echo "\
+[general]\n\
+email = \"aniket.wattamwar17@gmail.com\"\n\
+" > ~/.streamlit/credentials.toml
+
+echo "\
+[server]\n\
+headless = true\n\
+enableCORS=false\n\
+port = $PORT\n\
 " > ~/.streamlit/config.toml
+
